@@ -78,7 +78,7 @@ public class FetchAccessTokenRequestExecutor implements RequestExecutor {
     }
 
     private String fetchAccessTokenUrl(GitHubConfiguration gitHubConfiguration) {
-        return HttpUrl.parse(gitHubConfiguration.apiUrl())
+        return HttpUrl.parse(gitHubConfiguration.hostUrl())
                 .newBuilder()
                 .addPathSegment("login")
                 .addPathSegment("oauth")
